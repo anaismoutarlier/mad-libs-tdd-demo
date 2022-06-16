@@ -34,7 +34,6 @@ describe("MadLibs Main Page", () => {
     const story = `It was pizza day at school, and pizza was super pizza for lunch. But when she went outside to eat, a pizza stole her pizza !pizza chased the pizza all over school. She pizza, pizza, and pizza through the playground. Then she tripped on her pizza and the pizza escaped! Luckily, pizza’s friends were willing to share their with her.`.replace(/\n/g, "")
     cy.get('#submit-button').click()
 
-    cy.get("div.result").should("be.visible")
-    //.should("contain.text", story)
+    cy.get("div.result").should("be.visible").should("contain.text", story)
   })
 })
